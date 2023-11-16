@@ -4,21 +4,21 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-public class BaseClass {
-	private static BaseClass baseclass;
+public class HelperClass {
+	public static HelperClass helperclass;
 	private static WebDriver driver;
-	public final static int TIMEOUT =10;
 	
-	public BaseClass(){
+	private static WebDriver wait;
+	public final static int TIMEOUT = 10;
+	
+	//constructor
+	HelperClass(){
 		driver = new EdgeDriver();
-		new WebDriverWait(driver,Duration.ofSeconds(TIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 		driver.manage().window().maximize();
 	}
 	public static void openPage(String url) {
-		driver.get(url);
+		driver.get(url);		
 	}
 	
 	public static WebDriver getDriver() {
@@ -26,16 +26,16 @@ public class BaseClass {
 	}
 	
 	public static void setUpDriver() {
-		if (baseclass==null) {
-			
-			baseclass = new BaseClass();
+		if(helperclass == null) {
+			helperclass = new HelperClass();			
 		}
 	}
+	
 	public static void tearDown() {
 		if(driver!=null) {
 			driver.close();
 			driver.quit();
 		}
-	 baseclass =null;
+		helperclass = null;
 	}
 }
