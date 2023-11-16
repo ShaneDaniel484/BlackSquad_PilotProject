@@ -14,7 +14,7 @@ public class BaseClass {
 	
 	BaseClass(){
 		driver = new EdgeDriver();
-		wait = new WebDriverWait(driver,Duration.ofSeconds(TIMEOUT));
+		new WebDriverWait(driver,Duration.ofSeconds(TIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 		driver.manage().window().maximize();
 	}
