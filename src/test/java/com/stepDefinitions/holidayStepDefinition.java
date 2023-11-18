@@ -1,6 +1,6 @@
 package com.stepDefinitions;
 import com.actions.holidayPageActions;
-import com.utilityClass.BaseClass;
+import com.utility.BaseClass;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -55,6 +55,6 @@ public class holidayStepDefinition {
     @Then("the user select the city Marvel Of Georgia")
     public void the_user_select_the_city_marvel_of_georgia() {
         actions.setMarvel();
+    	System.out.println("Marvel of Georgia is found");
     }
 }
-

@@ -1,6 +1,5 @@
 package com.actions;
 
-
 import java.time.Duration;
 
 import org.junit.Assert;
@@ -10,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.locators.holidaysPageLocators;
-import com.utilityClass.BaseClass;
+import com.utility.BaseClass;
 
 public class holidayPageActions {
 	holidaysPageLocators holidaysLocators = null;
@@ -66,27 +65,9 @@ public class holidayPageActions {
 		actions.moveToElement(holidaysLocators.familytheme).click().build().perform();
 	}
 	public void setMarvel() {
-//		actions.moveToElement(holidaysLocators.MarvelofGeorgia).click().build().perform();
+////		actions.moveToElement(holidaysLocators.MarvelofGeorgia).click().build().perform();
+		wait.until(ExpectedConditions.visibilityOf(holidaysLocators.MarvelofGeorgia));
 		Assert.assertEquals(holidaysLocators.MarvelofGeorgia.getText(), "Marvels Of Georgia");
 		System.out.println("Asserted successfully");
 	}
-
-
-//	public void holidays() {
-//		setHolidays();
-//		this.setEurope();
-//		this.setDeparture();
-//		this.setDeparturecityChennai();
-//		this.setMonthofTravel();
-//		this.setMonthFeb();
-//		this.setDuration();
-//		this.setStayDuration();
-//		this.setPackageType();
-//		this.setPackageWithoutFlight();
-//		this.setTheme();
-//		this.setFamilyTheme();
-//		this.setMarvel();
-
-//	
-//		}
 }

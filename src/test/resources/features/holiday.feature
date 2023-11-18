@@ -1,4 +1,3 @@
-
 Feature: User Selects a Holiday category
 
   Scenario: User selects a Europe Tour packages

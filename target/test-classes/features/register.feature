@@ -10,3 +10,4 @@ Feature: Register an user in thomascook application
       | tzet      | userone  | jopsezamli2@gufum.com | 9878675645 | Welcome@123 | Welcome@123 |
     And user clicks register button
     Then user is navigated to homepage with user logged in
+

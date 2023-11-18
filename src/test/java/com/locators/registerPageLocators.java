@@ -44,6 +44,3 @@ public class registerPageLocators {
 	@FindBy(xpath = "//label[@class='login_reg_sprite css-label']")
 	public WebElement chkbox;
 }
-
-
-

@@ -3,10 +3,10 @@ package com.actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.locators.loginPageLocators;
-import com.utilityClass.BaseClass;
+import com.utility.BaseClass;
 
 public class loginPageActions {
-	loginPageLocators loginpagelocators;
+loginPageLocators loginpagelocators;
 	
 	public loginPageActions() {
 		loginpagelocators = new loginPageLocators();
