@@ -61,22 +61,13 @@ public class registerPageActions {
 	}
 	
 	public void clickRegister() throws InterruptedException {
-		//wait.until(ExpectedConditions.visibilityOf(registerLocators.registerButton)).click();
-		//jse.executeScript("document.getElementById('registerButton').click()");
-		registerLocators.chkbox.click();
-		Thread.sleep(3000);
-		registerLocators.chkbox.click();
-		Thread.sleep(3000);
-		registerLocators.registerButton.click();
-//		System.out.println("clicked");
-		driver.close();
-		//act.moveToElement(registerLocators.registerButton).click().perform();	
+		wait.until(ExpectedConditions.visibilityOf(registerLocators.registerButton)).click();
+		jse.executeScript("document.getElementById('registerButton').click()");
+		
 	}
 	
 	public void registerAssert() {
-//		wait.until(ExpectedConditions.visibilityOf(registerLocators.loginButton));
-//		String as = registerLocators.loginButton.getText();
-//		System.out.println(as);
+
 		act.moveToElement(registerLocators.dropDown).click().perform();
 //		boolean regAssert = registerLocators.logoutButton.isDisplayed();
 //		Assert.assertTrue(regAssert);

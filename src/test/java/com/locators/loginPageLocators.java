@@ -19,4 +19,10 @@ public class loginPageLocators {
 		
 		@FindBy(id="loginButton")
 		public WebElement Button;
+		
+		@FindBy(xpath="//a[text()='Logout']")
+		public WebElement logout;
+		
+		@FindBy(xpath="//p[text()='Please enter valid email id']")
+		public WebElement Message;
 }

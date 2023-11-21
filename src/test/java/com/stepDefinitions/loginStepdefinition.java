@@ -19,7 +19,8 @@ public class loginStepdefinition {
 	
 	@Given("user is in the Thomascook page from Login")
 	public void user_is_in_the_thomascook_page_from_login() {
-		BaseClass.openPage("https://www.thomascook.in");
+		data = new utilityclass();
+		BaseClass.openPage(data.url);
 		  BaseClass.log.info("WebPage Launched");
 	    System.out.println("Login Page");
 	}
@@ -28,6 +29,7 @@ public class loginStepdefinition {
 	public void user_clicks_the_login_button_on_top_right_corner_of_homepage() {
 		 login.clickButton1();
 		 BaseClass.log.info("User clicks login button in Homepage");
+		 
 	}
 
 	@When("Again user clicks login button shows in drop down.")
@@ -49,9 +51,11 @@ public class loginStepdefinition {
 	    login.setPassword(data.Password);
 	}
 
-	@Then("Finally user clicks the loginbutton and user in homepage of Registered user")
-	public void finally_user_clicks_the_loginbutton_and_user_in_homepage_of_registered_user() {
+	@Then("Finally user clicks the loginbutton and user in homepage Logged in")
+	public void finally_user_clicks_the_loginbutton_and_user_in_homepage_logged_in() {
 		 login.Button();
+		 login.clickButton1();
+		 login.logout();
 		 BaseClass.log.info("User clicks register button");
 
 	}
@@ -62,20 +66,23 @@ public class loginStepdefinition {
 	    System.out.println("Login Page");
 	}
 
-	@When("user enters the <email>")
-	public void user_enters_the_email(io.cucumber.datatable.DataTable dataTable) {
-		List<Map<String,String>> login = dataTable.asMaps(String.class,String.class);
-		  for(Map<String,String> data : login) {
-			 String EmailId = data.get("email");
-		  }
+	@When("user enters the Invalid email")
+	public void user_enters_the_invalid_email() {
+		data = new utilityclass();
+		login.setEmail(data.email);
 	}
 
-	@When("user enters the <password>")
-	public void user_enters_the_password(io.cucumber.datatable.DataTable dataTable) {
-		List<Map<String,String>> login = dataTable.asMaps(String.class,String.class);
-		  for(Map<String,String> data : login) {
-			 String Password = data.get("password");
+	@When("user enters the invalid password")
+	public void user_enters_the_invalid_password() {
+		data = new utilityclass();
+		login.setPassword(data.password);
+		
 	}
+	@Then("Finally user clicks the loginbutton and user gets Error message.")
+	public void finally_user_clicks_the_loginbutton_and_user_gets_error_message() {
+	   login.Button();
+		login.Message();
 	}
+
 
 }

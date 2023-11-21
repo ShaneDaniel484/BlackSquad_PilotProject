@@ -1,42 +1,56 @@
 package com.actions;
 
+//Import necessary packages
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
+//Import custom class
 import com.locators.mobileUpdateLocators;
+import com.utility.BaseClass;
 
+//Class to perform actions on the Mobile Update page
 public class mobileUpdateAction {
 
-    private mobileUpdateLocators locators;
+ // Initialize mobileUpdateLocators for interacting with elements
+ private mobileUpdateLocators locators;
 
-    public mobileUpdateAction(WebDriver driver) {
-        this.locators = new mobileUpdateLocators();
-        PageFactory.initElements(driver, this.locators);
-    }
-    public void clickOnMyAccount() {
-        this.locators.Accountdropdown.click();
-    }
+ // Constructor to initialize locators using PageFactory
+ public mobileUpdateAction() {
+     this.locators = new mobileUpdateLocators();
+     PageFactory.initElements(BaseClass.getDriver(), this.locators);
+ }
 
-    public void clickOnViewMyAccount() {
-        this.locators.Viewmyaccount.click();
-    }
+ // Clicks on the "My Account" dropdown
+ public void clickOnMyAccount() {
+     locators.Accountdropdown.click();
+ }
 
-    public void clickOnEditButton() {
-        this.locators.Edit.click();
-    }
+ // Clicks on the "View My Account" option
+ public void clickOnViewMyAccount() {
+     locators.Viewmyaccount.click();
+ }
 
-    public void changeMobileNumber(String newNumber) {
-        this.locators.mobileNumber.clear();
-        this.locators.mobileNumber.sendKeys(newNumber);
-    }
+ // Clicks on the "Edit" button to modify account details
+ public void clickOnEditButton() {
+     locators.Edit.click();
+ }
 
-    public void clickOnSaveButton() {
-        this.locators.saveButton.click();
-    }
+ // Clears the existing mobile number and enters a new one
+ public void changeMobileNumber() {
+     locators.mobileNumber.clear();
+     locators.mobileNumber.sendKeys("9876584501");
+ }
 
-    public String getSuccessMessage() {
-        // Add code to retrieve the success message
-        return "";
-    }
+ // Clicks on the "Save" button to save the changes
+ public void clickOnSaveButton() {
+     locators.saveButton.click();
+ }
+
+ // Retrieves the success message and asserts it
+ public void getSuccessMessage() {
+     String successMessage = locators.successMessege.getText();
+     Assert.assertEquals(successMessage, "Changes are saved successfully.");
+     System.out.println("Mobile number update asserted successfully");
+ }
 }
-

@@ -1,5 +1,6 @@
 Feature: User Selects a Holiday category
 
+
   Scenario: User selects a Europe Tour packages
   
     Given I want to select a Holiday category

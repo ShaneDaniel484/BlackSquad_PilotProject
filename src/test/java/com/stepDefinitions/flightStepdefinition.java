@@ -16,7 +16,8 @@ public class flightStepdefinition {
 	
 	@Given("customer is on thomascook page.")
 	public void customer_is_on_thomascook_page() {
-		BaseClass.openPage("https://www.thomascook.in");
+		data = new utilityclass();
+		BaseClass.openPage(data.url);
 	    System.out.println("Login Page");
 	}
 
@@ -44,7 +45,7 @@ public class flightStepdefinition {
 
 	@When("user clicks the date")
 	public void user_clicks_the_date() throws InterruptedException {
-	    fly.closeAd();
+	    //fly.closeAd();
 		fly.clickDate();
 	    
 	}
@@ -56,6 +57,8 @@ public class flightStepdefinition {
 	@Then("user clicks on the Search flight button")
 	public void user_clicks_on_the_search_flight_button() {
 	    fly.SearchButton();
+	    fly.ShowDetails();
+	    System.out.println("Showing flight details");
 	}
 
 }

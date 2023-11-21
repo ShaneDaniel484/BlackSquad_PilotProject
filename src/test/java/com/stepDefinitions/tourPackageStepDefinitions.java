@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.actions.tourPackageActions;
 import com.locators.tourPackageLocators;
 import com.utility.BaseClass;
+import com.utility.utilityclass;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,10 +17,11 @@ import io.cucumber.java.en.When;
 public class tourPackageStepDefinitions {
 	
 	tourPackageActions tourActions = new tourPackageActions();
-	
+	utilityclass data;
 	@Given("User Is On Thomascook website")
 	public void user_is_on_thomascook_website() {
-	    BaseClass.openPage("https://www.thomascook.in");
+		data = new utilityclass();
+		BaseClass.openPage(data.url);
 	}
 
 	@When("user gives place name")

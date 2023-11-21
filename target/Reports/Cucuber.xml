@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="35.342" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="User use to login the Thomascook Login page" name="user navigates to the ThomasCook Loginpage" time="34.85">
+<system-out><![CDATA[
+Given user is in the Thomascook page from Login.............................passed
+When user clicks the login button on top right corner of homepage...........passed
+When Again user clicks login button shows in drop down......................passed
+And user enters the valid email id in popup which shown.....................passed
+And user enters the valid password..........................................passed
+Then Finally user clicks the loginbutton and user in homepage of Registered user.passed
+]]></system-out>
+</testcase>
+</testsuite>

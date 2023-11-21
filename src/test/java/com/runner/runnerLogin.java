@@ -5,7 +5,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags="@ValidScenario",features="src\\test\\resources\\features\\login.feature",glue ="com.stepDefinitions",plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+@CucumberOptions(tags="",features="C:\\BlackSquad_PilotProject_1\\Thomascook\\src\\test\\resources\\features",glue ="com.stepDefinitions",plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 public class runnerLogin {
-
+		
 }

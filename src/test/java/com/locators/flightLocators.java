@@ -28,4 +28,7 @@ public class  flightLocators {
 	
 	@FindBy(xpath="//button[@id='search-button']")
 	public WebElement FlightSearch; 
+	
+	@FindBy(id="AIR-AZ")
+	public WebElement ShowingFlight;
 }

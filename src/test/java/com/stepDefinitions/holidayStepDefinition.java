@@ -1,6 +1,7 @@
 package com.stepDefinitions;
 import com.actions.holidayPageActions;
 import com.utility.BaseClass;
+import com.utility.utilityclass;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,12 +9,13 @@ import io.cucumber.java.en.When;
 
 public class holidayStepDefinition {
     holidayPageActions actions = new holidayPageActions();
-    
+    utilityclass data;
     
 
     @Given("I want to select a Holiday category")
     public void i_want_to_select_a_holiday_category() {
-    	BaseClass.openPage("https://www.thomascook.in");
+    	data = new utilityclass();
+    	BaseClass.openPage(data.url);
         actions.setHolidays();
     }
 

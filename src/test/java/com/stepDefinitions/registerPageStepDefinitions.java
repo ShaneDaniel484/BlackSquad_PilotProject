@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.actions.registerPageActions;
 import com.utility.BaseClass;
+import com.utility.utilityclass;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,10 +18,11 @@ public class registerPageStepDefinitions {
 	
 	
 	registerPageActions registerActions = new registerPageActions();
-	
+	utilityclass data;
 	@Given("user is on thomascook homepage")
 	public void user_is_on_thomascook_homepage() {
-		BaseClass.openPage("https:www.thomascook.in");
+		data = new utilityclass();
+		BaseClass.openPage(data.url);
 	    
 	}
 

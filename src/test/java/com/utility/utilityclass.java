@@ -12,12 +12,14 @@ public class utilityclass {
 	public String Password;
 	public String FromLocation;
 	public String Tolocation;
+	public String email;
+	public String password;
  
 	public utilityclass() {
 		data();
 	}
 	public void data() {
-		File file = new File("C:\\BlackSquad_PilotProject_1\\Thomascook\\src\\test\\resources\\logindata.properties");
+		File file = new File("C:\\Users\\aaron\\Downloads\\BlackSquad_PilotProject 3\\BlackSquad_PilotProject_1\\Thomascook\\src\\test\\resources\\logindata.properties");
 		FileInputStream fio =null;
 		try {
 			fio = new FileInputStream(file);
@@ -35,5 +37,8 @@ public class utilityclass {
 		Password = prop.getProperty("Password");
 		FromLocation = prop.getProperty("FromLocation");
 		Tolocation = prop.getProperty("Tolocation");
+		email = prop.getProperty("email");
+		password = prop.getProperty("password");
+				
 	}
 }

@@ -1,5 +1,4 @@
 package com.locators;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -19,6 +18,8 @@ public class mobileUpdateLocators {
 	@FindBy(xpath="//button[@id='myprofile_save']")
 	public WebElement saveButton;
 	
-	
+	@FindBy(id="success-cust-info")
+	public WebElement successMessege;
 	
 }
+

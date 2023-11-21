@@ -28,7 +28,7 @@ public class holidayPageActions {
 	}
 	public void setEurope()   {
 		
-//    	wait.until(ExpectedConditions.visibilityOf(holidaysLocators.Europetourpackage));
+
       	actions.moveToElement(holidaysLocators.Europetourpackage).click().build().perform();
       
 	}
