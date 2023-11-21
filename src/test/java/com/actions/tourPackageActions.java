@@ -25,31 +25,37 @@ public class tourPackageActions {
 	
 	public void selectPlace(String place) {
 		tourLocators.holidayPlace.sendKeys(place);
+		BaseClass.log.info("user give the place name");
 	}
 	
 	public void selectBudget() {
 		tourLocators.budgetSelect.click();
 		tourLocators.budget.click();
+		BaseClass.log.info("user selects the budget");
 	}
 	
 	public void selectMonth() {
 		tourLocators.monthSelect.click();
 		tourLocators.month.click();
+		BaseClass.log.info("user selects the month");
 	}
 	
 	public void clickSearch() {
 		tourLocators.searchButton.click();
+		BaseClass.log.info("user clicks the searh button");
 	}
 	
 	public void sort() {
 		Select select = new Select(tourLocators.sortButton);
 		select.selectByVisibleText("Duration - High to Low");
+		BaseClass.log.info("user selects the feature");
 	}
 	
 	public void sortAssert() {
 		String assertText = tourLocators.sortassert.getText();
 		Assert.assertEquals(assertText, "Paradise In Perth");
 		//System.out.println("Asserted successfully");
+		BaseClass.log.info("user gets the desired search result");
 	}
 }
 

@@ -524,3 +524,33 @@
 [INFO ] 2023-11-21 19:45:41.058 [main] loginStepdefinition - User clicks register button
 [INFO ] 2023-11-21 19:46:14.298 [main] loginStepdefinition - User clicks login button in Homepage
 [INFO ] 2023-11-21 19:46:16.457 [main] loginStepdefinition - User clicks login button in PopUp
+[INFO ] 2023-11-21 21:45:09.022 [main] loginStepdefinition - user clicks login button
+[INFO ] 2023-11-21 21:45:10.447 [main] loginStepdefinition - user clicks register button
+[INFO ] 2023-11-21 21:45:11.264 [main] loginStepdefinition - user enters fisrtname
+[INFO ] 2023-11-21 21:45:11.363 [main] loginStepdefinition - user enters lastname
+[INFO ] 2023-11-21 21:45:11.496 [main] loginStepdefinition - user enters email
+[INFO ] 2023-11-21 21:45:11.631 [main] loginStepdefinition - user enteres mobile number
+[INFO ] 2023-11-21 21:45:11.790 [main] loginStepdefinition - user enters password
+[INFO ] 2023-11-21 21:45:11.891 [main] loginStepdefinition - user cofirms password
+[INFO ] 2023-11-21 21:45:12.965 [main] loginStepdefinition - user clicks register button
+[ERROR] 2023-11-21 21:45:12.966 [main] loginStepdefinition - user could not click register button
+[INFO ] 2023-11-21 22:05:15.128 [main] loginStepdefinition - user clicks login button
+[INFO ] 2023-11-21 22:05:15.486 [main] loginStepdefinition - user clicks register button
+[INFO ] 2023-11-21 22:06:44.227 [main] loginStepdefinition - user clicks login button
+[INFO ] 2023-11-21 22:06:44.967 [main] loginStepdefinition - user clicks register button
+[INFO ] 2023-11-21 22:10:01.945 [main] loginStepdefinition - user clicks login button
+[INFO ] 2023-11-21 22:10:02.725 [main] loginStepdefinition - user clicks register button
+[INFO ] 2023-11-21 22:12:47.103 [main] loginStepdefinition - user clicks login button
+[INFO ] 2023-11-21 22:12:47.275 [main] loginStepdefinition - user clicks register button
+[INFO ] 2023-11-21 22:15:33.868 [main] loginStepdefinition - user clicks login button
+[INFO ] 2023-11-21 22:15:34.605 [main] loginStepdefinition - user clicks register button
+[INFO ] 2023-11-21 22:17:31.122 [main] loginStepdefinition - user clicks login button
+[INFO ] 2023-11-21 22:17:32.496 [main] loginStepdefinition - user clicks register button
+[INFO ] 2023-11-21 22:17:37.468 [main] loginStepdefinition - user enters fisrtname
+[INFO ] 2023-11-21 22:17:38.328 [main] loginStepdefinition - user enters lastname
+[INFO ] 2023-11-21 22:17:38.509 [main] loginStepdefinition - user enters email
+[INFO ] 2023-11-21 22:17:39.515 [main] loginStepdefinition - user enteres mobile number
+[INFO ] 2023-11-21 22:17:39.664 [main] loginStepdefinition - user enters password
+[INFO ] 2023-11-21 22:17:39.829 [main] loginStepdefinition - user cofirms password
+[INFO ] 2023-11-21 22:17:41.427 [main] loginStepdefinition - user clicks register button
+[ERROR] 2023-11-21 22:17:41.427 [main] loginStepdefinition - user could not click register button
